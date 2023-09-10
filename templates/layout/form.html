@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+
+    <div class="card mt-5" style="width: 25rem; height: 269px;">
+        <div class="card-header">
+
+            {{ request.title }}
+        </div>
+        <ul class="list-group list-group-flush">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{ form }}
+                <br>
+                <br>
+                <button class="btn btn-info" type="submit">{{ request.title }}</button>
+            </form>
+        </ul>
+    </div>
+    <div class="col-sm">
+
+
+    </div>
+</div>
+
+{% endblock %}
